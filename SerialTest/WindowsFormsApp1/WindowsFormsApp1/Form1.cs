@@ -17,10 +17,10 @@ namespace WindowsFormsApp1
             for (int i = 0; i < portList.Length; ++i)
             {
                 string name = portList[i];
-                comboBox1.Items.Add(name);
+                PortNameComboBox.Items.Add(name);
             }
-            comboBox1.Text = portList[0];
-            comboBox2.Text = "9600";
+            PortNameComboBox.Text = portList[0];
+            BaudRateComboBox.Text = "9600";
 
             serialPort1.DataReceived+=new System.IO.Ports.SerialDataReceivedEventHandler(port_DataReceived);
 
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
         { 
 
             
-            if (!radioButton3.Checked)
+            if (!RecHexRadioButton.Checked)
             {
                 string str = serialPort1.ReadExisting();
                 textBox1.AppendText(str);
@@ -67,15 +67,15 @@ namespace WindowsFormsApp1
 
 
 
-        private void button1_Click(object sender, EventArgs e)//打开
+        private void OpenBtn_Click(object sender, EventArgs e)//打开
         {
             try
             {
-                serialPort1.PortName = comboBox1.Text;
-                serialPort1.BaudRate = Convert.ToInt32(comboBox2.Text, 10);
+                serialPort1.PortName = PortNameComboBox.Text;
+                serialPort1.BaudRate = Convert.ToInt32(BaudRateComboBox.Text, 10);
                 serialPort1.Open();
-                button1.Enabled = false;
-                button2.Enabled = true;
+                OpenBtn.Enabled = false;
+                CloseBtn.Enabled = true;
 
 
             }
@@ -86,13 +86,13 @@ namespace WindowsFormsApp1
             }
         }
          
-        private void button2_Click(object sender, EventArgs e)//关闭
+        private void CloseBtn_Click(object sender, EventArgs e)//关闭
         {
             try
             {
                 serialPort1.Close();
-                button1.Enabled = true;
-                button2.Enabled = false;
+                OpenBtn.Enabled = true;
+                CloseBtn.Enabled = false;
             }
             catch
             {
@@ -105,7 +105,7 @@ namespace WindowsFormsApp1
            
             if(serialPort1.IsOpen&&textBox2.Text!="")
             {
-                if (!radioButton1.Checked)
+                if (!SendHexRadioButton.Checked)
                 {
                     try
                     {
@@ -114,8 +114,8 @@ namespace WindowsFormsApp1
                     {
                         MessageBox.Show("写入失败", "提示：");
                         serialPort1.Close();
-                        button1.Enabled = true;
-                        button2.Enabled = false;
+                        OpenBtn.Enabled = true;
+                        CloseBtn.Enabled = false;
                 
                     }
 
@@ -144,8 +144,8 @@ namespace WindowsFormsApp1
                         {
                             MessageBox.Show("写入失败", "提示：");
                             serialPort1.Close();
-                            button1.Enabled = true;
-                            button2.Enabled = false;
+                            OpenBtn.Enabled = true;
+                            CloseBtn.Enabled = false;
 
                         }
 

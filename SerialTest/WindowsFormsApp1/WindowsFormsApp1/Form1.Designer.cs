@@ -30,41 +30,41 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ReceivePanel = new System.Windows.Forms.Panel();
+            this.RecCharRadioButton = new System.Windows.Forms.RadioButton();
+            this.RecHexRadioButton = new System.Windows.Forms.RadioButton();
+            this.SendPanel = new System.Windows.Forms.Panel();
+            this.SendCharRadioButton = new System.Windows.Forms.RadioButton();
+            this.SendHexRadioButton = new System.Windows.Forms.RadioButton();
+            this.CloseBtn = new System.Windows.Forms.Button();
+            this.OpenBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BaudRateComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.PortNameComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.ReceivePanel.SuspendLayout();
+            this.SendPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.groupBox1.Controls.Add(this.panel2);
-            this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.ReceivePanel);
+            this.groupBox1.Controls.Add(this.SendPanel);
+            this.groupBox1.Controls.Add(this.CloseBtn);
+            this.groupBox1.Controls.Add(this.OpenBtn);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.BaudRateComboBox);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.PortNameComboBox);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -73,89 +73,89 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "设置";
             // 
-            // panel2
+            // ReceivePanel
             // 
-            this.panel2.Controls.Add(this.radioButton4);
-            this.panel2.Controls.Add(this.radioButton3);
-            this.panel2.Location = new System.Drawing.Point(68, 159);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(154, 36);
-            this.panel2.TabIndex = 13;
+            this.ReceivePanel.Controls.Add(this.RecCharRadioButton);
+            this.ReceivePanel.Controls.Add(this.RecHexRadioButton);
+            this.ReceivePanel.Location = new System.Drawing.Point(68, 159);
+            this.ReceivePanel.Name = "ReceivePanel";
+            this.ReceivePanel.Size = new System.Drawing.Size(154, 36);
+            this.ReceivePanel.TabIndex = 13;
             // 
-            // radioButton4
+            // RecCharRadioButton
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(87, 12);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(47, 16);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.Text = "字符";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.RecCharRadioButton.AutoSize = true;
+            this.RecCharRadioButton.Location = new System.Drawing.Point(87, 12);
+            this.RecCharRadioButton.Name = "RecCharRadioButton";
+            this.RecCharRadioButton.Size = new System.Drawing.Size(47, 16);
+            this.RecCharRadioButton.TabIndex = 2;
+            this.RecCharRadioButton.Text = "字符";
+            this.RecCharRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // RecHexRadioButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Checked = true;
-            this.radioButton3.Location = new System.Drawing.Point(13, 12);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(41, 16);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "hex";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.RecHexRadioButton.AutoSize = true;
+            this.RecHexRadioButton.Checked = true;
+            this.RecHexRadioButton.Location = new System.Drawing.Point(13, 12);
+            this.RecHexRadioButton.Name = "RecHexRadioButton";
+            this.RecHexRadioButton.Size = new System.Drawing.Size(41, 16);
+            this.RecHexRadioButton.TabIndex = 1;
+            this.RecHexRadioButton.TabStop = true;
+            this.RecHexRadioButton.Text = "hex";
+            this.RecHexRadioButton.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // SendPanel
             // 
-            this.panel1.Controls.Add(this.radioButton2);
-            this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(68, 117);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(154, 36);
-            this.panel1.TabIndex = 12;
+            this.SendPanel.Controls.Add(this.SendCharRadioButton);
+            this.SendPanel.Controls.Add(this.SendHexRadioButton);
+            this.SendPanel.Location = new System.Drawing.Point(68, 117);
+            this.SendPanel.Name = "SendPanel";
+            this.SendPanel.Size = new System.Drawing.Size(154, 36);
+            this.SendPanel.TabIndex = 12;
             // 
-            // radioButton2
+            // SendCharRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(87, 11);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(47, 16);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.Text = "字符";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.SendCharRadioButton.AutoSize = true;
+            this.SendCharRadioButton.Location = new System.Drawing.Point(87, 11);
+            this.SendCharRadioButton.Name = "SendCharRadioButton";
+            this.SendCharRadioButton.Size = new System.Drawing.Size(47, 16);
+            this.SendCharRadioButton.TabIndex = 1;
+            this.SendCharRadioButton.Text = "字符";
+            this.SendCharRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // SendHexRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(13, 11);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(41, 16);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "hex";
-            this.radioButton1.UseVisualStyleBackColor = false;
+            this.SendHexRadioButton.AutoSize = true;
+            this.SendHexRadioButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.SendHexRadioButton.Checked = true;
+            this.SendHexRadioButton.Location = new System.Drawing.Point(13, 11);
+            this.SendHexRadioButton.Name = "SendHexRadioButton";
+            this.SendHexRadioButton.Size = new System.Drawing.Size(41, 16);
+            this.SendHexRadioButton.TabIndex = 0;
+            this.SendHexRadioButton.TabStop = true;
+            this.SendHexRadioButton.Text = "hex";
+            this.SendHexRadioButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // CloseBtn
             // 
-            this.button2.Enabled = false;
-            this.button2.Location = new System.Drawing.Point(141, 241);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 32);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "关闭端口";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.CloseBtn.Enabled = false;
+            this.CloseBtn.Location = new System.Drawing.Point(141, 241);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(81, 32);
+            this.CloseBtn.TabIndex = 11;
+            this.CloseBtn.Text = "关闭端口";
+            this.CloseBtn.UseVisualStyleBackColor = true;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
-            // button1
+            // OpenBtn
             // 
-            this.button1.Location = new System.Drawing.Point(11, 241);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 32);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "打开端口";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.OpenBtn.Location = new System.Drawing.Point(11, 241);
+            this.OpenBtn.Name = "OpenBtn";
+            this.OpenBtn.Size = new System.Drawing.Size(86, 32);
+            this.OpenBtn.TabIndex = 10;
+            this.OpenBtn.Text = "打开端口";
+            this.OpenBtn.UseVisualStyleBackColor = true;
+            this.OpenBtn.Click += new System.EventHandler(this.OpenBtn_Click);
             // 
             // label4
             // 
@@ -175,11 +175,11 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "发送格式";
             // 
-            // comboBox2
+            // BaudRateComboBox
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.BaudRateComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.BaudRateComboBox.FormattingEnabled = true;
+            this.BaudRateComboBox.Items.AddRange(new object[] {
             "1200",
             "2400",
             "4800",
@@ -187,10 +187,10 @@
             "14400",
             "19200",
             "115200"});
-            this.comboBox2.Location = new System.Drawing.Point(81, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 20);
-            this.comboBox2.TabIndex = 3;
+            this.BaudRateComboBox.Location = new System.Drawing.Point(81, 71);
+            this.BaudRateComboBox.Name = "BaudRateComboBox";
+            this.BaudRateComboBox.Size = new System.Drawing.Size(121, 20);
+            this.BaudRateComboBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -201,14 +201,14 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "波特率";
             // 
-            // comboBox1
+            // PortNameComboBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(81, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 20);
-            this.comboBox1.TabIndex = 1;
+            this.PortNameComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PortNameComboBox.FormattingEnabled = true;
+            this.PortNameComboBox.Location = new System.Drawing.Point(81, 24);
+            this.PortNameComboBox.Name = "PortNameComboBox";
+            this.PortNameComboBox.Size = new System.Drawing.Size(121, 20);
+            this.PortNameComboBox.TabIndex = 1;
             // 
             // label1
             // 
@@ -264,10 +264,10 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ReceivePanel.ResumeLayout(false);
+            this.ReceivePanel.PerformLayout();
+            this.SendPanel.ResumeLayout(false);
+            this.SendPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,22 +276,22 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CloseBtn;
+        private System.Windows.Forms.Button OpenBtn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox BaudRateComboBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox PortNameComboBox;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.Panel ReceivePanel;
+        private System.Windows.Forms.Panel SendPanel;
+        private System.Windows.Forms.RadioButton SendHexRadioButton;
+        private System.Windows.Forms.RadioButton RecCharRadioButton;
+        private System.Windows.Forms.RadioButton RecHexRadioButton;
+        private System.Windows.Forms.RadioButton SendCharRadioButton;
         private System.IO.Ports.SerialPort serialPort1;
     }
 }
