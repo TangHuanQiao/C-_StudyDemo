@@ -44,9 +44,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.PortNameComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.RecTextBox = new System.Windows.Forms.TextBox();
+            this.SendTextBox = new System.Windows.Forms.TextBox();
+            this.SendBtn = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.groupBox1.SuspendLayout();
             this.ReceivePanel.SuspendLayout();
@@ -219,35 +219,35 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "端口";
             // 
-            // textBox1
+            // RecTextBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.textBox1.Location = new System.Drawing.Point(246, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(542, 322);
-            this.textBox1.TabIndex = 2;
+            this.RecTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.RecTextBox.Location = new System.Drawing.Point(246, 12);
+            this.RecTextBox.Multiline = true;
+            this.RecTextBox.Name = "RecTextBox";
+            this.RecTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.RecTextBox.Size = new System.Drawing.Size(542, 322);
+            this.RecTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // SendTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(12, 351);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox2.Size = new System.Drawing.Size(612, 87);
-            this.textBox2.TabIndex = 3;
+            this.SendTextBox.Location = new System.Drawing.Point(12, 351);
+            this.SendTextBox.Multiline = true;
+            this.SendTextBox.Name = "SendTextBox";
+            this.SendTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.SendTextBox.Size = new System.Drawing.Size(612, 87);
+            this.SendTextBox.TabIndex = 3;
             // 
-            // button3
+            // SendBtn
             // 
-            this.button3.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(643, 370);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 68);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "发送";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.SendBtn.Font = new System.Drawing.Font("微软雅黑", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.SendBtn.Location = new System.Drawing.Point(643, 370);
+            this.SendBtn.Name = "SendBtn";
+            this.SendBtn.Size = new System.Drawing.Size(136, 68);
+            this.SendBtn.TabIndex = 4;
+            this.SendBtn.Text = "发送";
+            this.SendBtn.UseVisualStyleBackColor = true;
+            this.SendBtn.Click += new System.EventHandler(this.SendBtn_Click);
             // 
             // Form1
             // 
@@ -255,9 +255,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(795, 455);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.SendBtn);
+            this.Controls.Add(this.SendTextBox);
+            this.Controls.Add(this.RecTextBox);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form1";
             this.Text = "SerialTest";
@@ -283,9 +283,9 @@
         private System.Windows.Forms.ComboBox BaudRateComboBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox PortNameComboBox;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox RecTextBox;
+        private System.Windows.Forms.TextBox SendTextBox;
+        private System.Windows.Forms.Button SendBtn;
         private System.Windows.Forms.Panel ReceivePanel;
         private System.Windows.Forms.Panel SendPanel;
         private System.Windows.Forms.RadioButton SendHexRadioButton;

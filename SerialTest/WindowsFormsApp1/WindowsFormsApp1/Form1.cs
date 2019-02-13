@@ -34,7 +34,7 @@ namespace WindowsFormsApp1
             if (!RecHexRadioButton.Checked)
             {
                 string str = serialPort1.ReadExisting();
-                textBox1.AppendText(str);
+                RecTextBox.AppendText(str);
 
             }else
             {
@@ -52,7 +52,7 @@ namespace WindowsFormsApp1
                         SerialIn += "0x" + readBuffer[i].ToString("X2") + " ";//字符串ASCIIstr2 为对应的ASCII（16进制）字符串
                        }
 
-                    textBox1.AppendText(SerialIn);
+                    RecTextBox.AppendText(SerialIn);
 
                 }
 
@@ -100,16 +100,16 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)//发送
+        private void SendBtn_Click(object sender, EventArgs e)//发送
         {
            
-            if(serialPort1.IsOpen&&textBox2.Text!="")
+            if(serialPort1.IsOpen&&SendTextBox.Text!="")
             {
                 if (!SendHexRadioButton.Checked)
                 {
                     try
                     {
-                        serialPort1.Write(textBox2.Text);
+                        serialPort1.Write(SendTextBox.Text);
                     }catch
                     {
                         MessageBox.Show("写入失败", "提示：");
@@ -123,7 +123,7 @@ namespace WindowsFormsApp1
 
                 }else
                 {
-                    string str = textBox2.Text.ToString();
+                    string str = SendTextBox.Text.ToString();
                     str = str.Replace(" ", "");
 
                     if(IsHexadecimal(str)!=true)
